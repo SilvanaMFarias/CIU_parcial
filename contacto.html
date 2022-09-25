@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>La Sandwichería</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link id = "modo_css" rel="stylesheet" href="css/modo_claro.css">
+  </head>
+  <body>
+    <!-- ENCABEZADO -->
+    <!-- ENCABEZADO-->
+    <header class="encabezado fixed-top">
+      <div class="container-fluid">
+        <div class="row justify-content-md-center">
+          <div class="col-2">
+            <img src="imagenes/colores_logo.png" width="100%" height="100%">
+          </div>
+          <div class="col-4 col align-self-center">
+            <h1>LA</h1>
+            <h1>SANDWICHERIA</h1>
+          </div>
+          <div class="col align-self-center">
+            <div id="navegador_menu">
+              <ul>
+                <li id="pag_index"><h2><a href="index.html">INICIO</a></h2></li>
+                <li id="pag_menu"><h2><a href="menu.html">MENU</a></h2></li>
+                <li id="pag_detalle"><h2><a href="detalle.html">DETALLE</a></h2></li>
+                <li id="pag_contacto"><h2><a href="contacto.html">CONTACTO</a></h2></li>
+              </ul>
+            </div>
+            <!-- Oculta los items del menu que no corresponden -->
+            <script type="text/javascript">
+              ocultar_items_menu("contacto"); 
+            </script>
+          </div>          
+          <div class="col-1 align-self-center">
+            <button type="button" class="btn btn-light" id="boton_modo" onclick="cambiar_modocss()">Modo oscuro</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- CONTENIDO -->
+    <div class="contenido">
+      <div class="container">
+        <!-- FILA 1 -->
+        <div class="row justify-content-md-center">
+          <div class="col-6">
+            <h4>Contáctenos</h4>
+          </div>
+        </div>
+          <form method="POST" action="" id="formulario">
+            <!-- FILA 2 -->
+            <div class="row justify-content-md-center">
+              <div class="col-2">
+                <label>Nombre</label>
+                <br>
+                <input type="text" name="nombre" placeholder="Nombre" maxlength="60" required>
+                <br>
+                <label>Email</label>
+                <br>
+                <input type="text" name="email" placeholder="Email" maxlength="100" required>
+                <br>
+                <label>Teléfono</label>
+                <br>
+                <input type="text" name="telefono" placeholder="Teléfono">
+              </div>
+              <div class="col-4">
+                <label>Su consulta</label>
+                <br>
+                <textarea id="nombre" placeholder="Su consulta" cols="60" rows="6" required></textarea>
+              </div>
+            </div>
+              <!--  FILA 3 -->
+              <div class="row justify-content-md-center">
+                <div class="col-2">
+                  <input type=submit>
+                </div>
+                <div class="col-4" id="mensaje"></div>
+              </div>
+            </form>
+        </div>
+    </div>
+    <!--  PIE -->
+    <footer class="pie">
+      <div class="container-fluid">
+       <div class="row justify-content-md-center">
+          <div class="col-5">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.5986614010453!2d-58.60163958255616!3d-34.639581099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb87ffa135d9d%3A0x37e213aa1029a4cf!2sPrimera%20Junta%20602%2C%20B1706EDL%20Haedo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1663893753836!5m2!1ses!2sar" width="600" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="col-2">
+            <p>LA SANDWICHERIA</p>
+            <p>Primera Junta 602, Haedo</p>
+            <p>Buenos Aires, Argentina</p>
+            <p>Tel: (5411) 4665-2520</p>
+            <p>Horarios: Domingos a Sábados</p>  
+            <p>de 11 a 15 hs y de 19 a 23 hs</p>  
+            <p>info@lasandwicheria.gmail.com</p>  
+          </div>
+          <div class="col-2">
+            <p>Realizá tu pedido</p>
+            <a href="https://www.pedidosya.com.ar/"><img src="imagenes/pedidosya_sinfondo.png" alt="Pedidos Ya" width="60%"></a>
+            <p>Seguinos en nuestras redes</p>
+            <a href="https://www.instagram.com/la.sandwicheria/"><img src="imagenes/instagram.png" alt="Instagram" width="20%"></a>
+            <a href="https://es-la.facebook.com/LaSandwicheriaa/"><img src="imagenes/facebook.png" alt="Facebook" width="20%"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

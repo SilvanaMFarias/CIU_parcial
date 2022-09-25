@@ -1,0 +1,39 @@
+*{
+  color: white;
+}
+
+body{
+  background-image: url(../imagenes/fondo_oscuro.jpg);
+}
+
+body,.contenido div{
+  background-color: rgb(90, 90, 90);
+}
+
+.encabezado, .pie, .pieppal{
+  background-color: rgb(40,40, 40);
+}
+
+.encabezado a{
+  color:white;
+}
+
+a{
+  color: white;
+}
+
+.detalle div {
+  border-color: white;
+}
+
+input{
+  color: black;
+}
+
+#boton_modo {
+  color: white
+}
+
+#boton_modo,#navegador_menu ul li a:hover{
+  background-color: rgb(90, 90, 90);
+}

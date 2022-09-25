@@ -1,0 +1,32 @@
+* {
+  color: black;
+}
+
+body{
+  background-image: url(../imagenes/fondo_claro.jpg);
+}
+
+body,.contenido div{ 
+  background-color: rgb(233, 231, 221);
+}
+
+.encabezado, .pie,.pieppal{
+  background-color:rgb(226, 218, 185)
+}
+
+.encabezado a{
+  color: black;
+}
+
+a{
+  color: black;
+}
+
+.detalle div {
+  border-color: black;
+}
+
+#boton_modo,#navegador_menu ul li a:hover{
+  background-color: rgb(222, 209, 156);
+}
+

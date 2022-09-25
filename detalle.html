@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>La Sandwichería</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link id = "modo_css" rel="stylesheet" href="css/modo_claro.css">
+  </head>
+  <body>
+    <!-- ENCABEZADO-->
+    <header class="encabezado fixed-top">
+      <div class="container-fluid">
+        <div class="row justify-content-md-center">
+          <div class="col-2">
+            <img src="imagenes/colores_logo.png" width="100%" height="100%">
+          </div>
+          <div class="col-4 col align-self-center">
+            <h1>LA</h1>
+            <h1>SANDWICHERIA</h1>
+          </div>
+          <div class="col align-self-center">
+            <div id="navegador_menu">
+              <ul>
+                <li id="pag_index"><h2><a href="index.html">INICIO</a></h2></li>
+                <li id="pag_menu"><h2><a href="menu.html">MENU</a></h2></li>
+                <li id="pag_detalle"><h2><a href="detalle.html">DETALLE</a></h2></li>
+                <li id="pag_contacto"><h2><a href="contacto.html">CONTACTO</a></h2></li>
+              </ul>
+            </div>
+             <!-- Oculta los items del menu que no corresponden -->
+            <script type="text/javascript">
+              ocultar_items_menu("detalle"); 
+            </script>
+          </div>          
+          <div class="col-1 align-self-center">
+            <button type="button" class="btn btn-light" id="boton_modo" onclick="cambiar_modocss()">Modo oscuro</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <div class="contenido">
+      <div class="container">
+
+          <!-- SANDWICHES-->
+          <div class="row justify-content-md-center itemmenu">
+            <div class="col-6">
+              <h3 id="sandwiches">SANDWICHES</h3>
+            </div>
+          </div>
+          <div class="row justify-content-md-center detalle">
+            <div class="col-5">
+              <h4>Crudo y Dambo</h4>
+              <p>Jamón crudo, queso danbo, rúcula, tomates asados y pesto suave.</p>
+            </div>
+            <div class="col-1">
+              <h4>$700</h4>
+            </div>
+          </div>
+          <div class="row justify-content-md-center detalle">
+            <div class="col-5">
+              <h4>Ternera Braseada</h4>
+              <p>Carne braseada con queso, cebolla caramelizada tomates asados y mostaza a la miel.</p>
+            </div>
+            <div class="col-1">
+              <h4>$750</h4>
+            </div>
+          </div>
+          <div class="row justify-content-md-center detalle">
+            <div class="col-5">
+              <h4>Veggie</h4>
+              <p>Berenjena, zapallito ó zucchini grillado, rúcula, cebolla caramelizada y queso blanco en pan integral con semillas.</p>
+            </div>
+            <div class="col-1">
+              <h4>$650</h4>
+            </div>
+          </div>
+          <div class="row justify-content-md-center detalle">
+            <div class="col-5">
+              <h4>Milanesa Completa de Pollo</h4>
+              <p>Milanesa de pollo (pechuga) con lechuga, tomate, queso, huevo y mayonesa.</p>
+            </div>
+            <div class="col-1">
+              <h4>$950</h4>
+            </div>
+          </div>
+          
+        <!-- PLATOS DEL DIA -->
+        <div class="row justify-content-md-center itemmenu" id="platosdia">
+          <div class="col-6">
+            <h3>PLATOS DEL DIA</h3>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Carne al horno con papas</h4>
+          </div>
+          <div class="col-1">
+            <h4>$950</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Risotto de Hongos</h4>
+          </div>
+          <div class="col-1">
+            <h4>$850</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Tarta de verduras</h4>
+            <p>De espinaca, zapallitos o calabaza.</p>
+          </div>
+          <div class="col-1">
+            <h4>$700</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Ravioles de ricota</h4>
+            <p>Con salsas filetto, crema o rosa.</p>
+          </div>
+          <div class="col-1">
+            <h4>$900</h4>
+          </div>
+        </div>
+
+        <!-- ENSALADAS -->
+        <div class="row justify-content-md-center itemmenu" id="ensaladas">
+          <div class="col-6">
+            <h3>ENSALADAS</h3>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Cesar crispy</h4>
+            <p>Hojas verdes, queso parmesano, croutons de pan tostado, pollo crispy y aderezo cesar.</p>
+          </div>
+          <div class="col-1">
+            <h4>$800</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Caprese</h4>
+            <p>Hojas verdes, tomates asados, queso azul, crutones de pan tostado y jamón crudo.</p>
+          </div>
+          <div class="col-1">
+            <h4>$750</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Rusa</h4>
+            <p>Papas, zanahorias, arvejas y mayonesa.</p>
+          </div>
+          <div class="col-1">
+            <h4>$600</h4>
+          </div>
+        </div>
+
+         <!-- PLATOS -->
+         <div class="row justify-content-md-center itemmenu"  id="platos">
+          <div class="col-6">
+            <h3>PLATOS</h3>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Milanesa con papas fritas</h4>
+            <p>Milanesa de pollo o carne. Opcional papas españolas.</p>
+          </div>
+          <div class="col-1">
+            <h4>$1200</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Guiso de lentejas</h4>
+            <p>Con panceta y chorizo.</p>
+          </div>
+          <div class="col-1">
+            <h4>$750</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Suprema Suiza con puré de papa</h4>
+          </div>
+          <div class="col-1">
+            <h4>$950</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Pechuga grillada con ensalada verde</h4>
+          </div>
+          <div class="col-1">
+            <h4>$900</h4>
+          </div>
+        </div>
+
+        <!-- BEBIDAS -->
+        <div class="row justify-content-md-center itemmenu" id="bebidas">
+          <div class="col-6">
+            <h3>BEBIDAS</h3>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Aguas con y sin gas 500ml</h4>
+          </div>
+          <div class="col-1">
+            <h4>$200</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Aguas saborizadas 500ml</h4>
+            <p>Líneas Aquarius y Levité. Sabor naranja, pomelo y limón.</p>
+          </div>
+          <div class="col-1">
+            <h4>$350</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Gaseosas 350ml</h4>
+            <p>Línea Coca Cola.</p>
+          </div>
+          <div class="col-1">
+            <h4>$450</h4>
+          </div>
+        </div>
+
+        <!-- CAFETERIA -->
+        <div class="row justify-content-md-center itemmenu" id="cafeteria">
+          <div class="col-6">
+            <h3>CAFETERIA</h3>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Café en jarrito</h4>
+          </div>
+          <div class="col-1">
+            <h4>$300</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Té</h4>
+            <p>Variedades: común, limón, hierbas y frutilla.</p>
+          </div>
+          <div class="col-1">
+            <h4>$200</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Submarino</h4>
+            <p>Con chocolete blanco o negro.</p>
+          </div>
+          <div class="col-1">
+            <h4>$450</h4>
+          </div>
+        </div>
+
+        <!-- POSTRES -->
+        <div class="row justify-content-md-center itemmenu" id="postres">
+          <div class="col-6">
+            <h3>POSTRES</h3>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Flan Casero</h4>
+            <p>Con dulce de leche y crema.</p>
+          </div>
+          <div class="col-1">
+            <h4>$550</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Tiramisú</h4>
+          </div>
+          <div class="col-1">
+            <h4>$600</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Tartas / Porción de Torta</h4>
+            <p>Lemon Pie, selva negra, matilda, tarta de frutilla o durazno.</p>
+          </div>
+          <div class="col-1">
+            <h4>$700</h4>
+          </div>
+        </div>
+       
+        <!-- TRAGOS -->
+        <div class="row justify-content-md-center itemmenu" id="tragos">
+          <div class="col-6">
+            <h3>TRAGOS</h3>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Daikiri</h4>
+            <p>De frutilla o durazno.</p>
+          </div>
+          <div class="col-1">
+            <h4>$700</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Fernet con Cola</h4>
+          </div>
+          <div class="col-1">
+            <h4>$800</h4>
+          </div>
+        </div>
+        <div class="row justify-content-md-center detalle">
+          <div class="col-5">
+            <h4>Gancia</h4>
+          </div>
+          <div class="col-1">
+            <h4>$700</h4>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <!--  PIE -->
+    <footer class="pie">
+      <div class="container-fluid">
+       <div class="row justify-content-md-center">
+          <div class="col-5">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.5986614010453!2d-58.60163958255616!3d-34.639581099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb87ffa135d9d%3A0x37e213aa1029a4cf!2sPrimera%20Junta%20602%2C%20B1706EDL%20Haedo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1663893753836!5m2!1ses!2sar" width="600" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="col-2">
+            <p>LA SANDWICHERIA</p>
+            <p>Primera Junta 602, Haedo</p>
+            <p>Buenos Aires, Argentina</p>
+            <p>Tel: (5411) 4665-2520</p>
+            <p>Horarios: Domingos a Sábados</p>  
+            <p>de 11 a 15 hs y de 19 a 23 hs</p>  
+            <p>info@lasandwicheria.gmail.com</p>  
+          </div>
+          <div class="col-2">
+            <p>Realizá tu pedido</p>
+            <a href="https://www.pedidosya.com.ar/"><img src="imagenes/pedidosya_sinfondo.png" alt="Pedidos Ya" width="60%"></a>
+            <p>Seguinos en nuestras redes</p>
+            <a href="https://www.instagram.com/la.sandwicheria/"><img src="imagenes/instagram.png" alt="Instagram" width="20%"></a>
+            <a href="https://es-la.facebook.com/LaSandwicheriaa/"><img src="imagenes/facebook.png" alt="Facebook" width="20%"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
