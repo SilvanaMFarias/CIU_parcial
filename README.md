@@ -13,3 +13,6 @@ El cambio a dark_mode está implementado sobre un botón. Al pulsarlo (evento on
 
 El menú completo está realizado sobre el html mismo, pero, mediante una función de js, se ocultan las opciones de menú que no deben mostrarse, según la página en donde se esté parado.
 
+Publicado en:
+
+https://lasandwicheria.netlify.app/
